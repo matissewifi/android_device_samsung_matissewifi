@@ -25,6 +25,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
 
 # Partitions
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 
 # Properties
