@@ -12,23 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common matisse3g
+# inherit from common matissewifi
 -include device/samsung/matisse-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := matissewifi,matisse3g
+TARGET_OTA_ASSERT_DEVICE := matissewifi
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_matisse3g_defconfig
-
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
-BOARD_CACHEIMAGE_PARTITION_SIZE := 524288000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
-
-# Radio
-BOARD_RIL_CLASS := ../../../device/samsung/matisse/ril
+TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
 
 # inherit from the proprietary version
--include vendor/samsung/matisse3g/BoardConfigVendor.mk
+-include vendor/samsung/matissewifi/BoardConfigVendor.mk

@@ -17,19 +17,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisse3g/matisse3g-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.netmgrd.qos.enable=true \
-    persist.data.qmi.adb_logmask=0 \
-    persist.radio.add_power_save=1 \
-    persist.radio.lte_vrat_report=1 \
-    ro.telephony.mms_data_profile=5 \
-    ro.telephony.ril_class=SamsungMSM8226RIL
-    
-# common matisse3g
-$(call inherit-product, device/samsung/matisse-common/matisse3g.mk)
+# common matisse
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)
