@@ -17,23 +17,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matisse3g/matisse3g-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# NFC
-# See https://github.com/CyanogenMod/android_external_libnfc-nci/blob/cm-14.1/halimpl/pn54x/Android.mk#L21
-# for magic values of NXP_CHIP_TYPE.
-NXP_CHIP_TYPE := 1
-PRODUCT_PACKAGES += \
-    libpn547_fw \
-    nfc_nci.pn54x.default
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
-
-# common klte
-$(call inherit-product, device/samsung/klte-common/klte.mk)
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.netmgrd.qos.enable=true \
+    persist.data.qmi.adb_logmask=0 \
+    persist.radio.add_power_save=1 \
+    persist.radio.lte_vrat_report=1 \
+    ro.telephony.mms_data_profile=5 \
+    ro.telephony.ril_class=SamsungMSM8226RIL
+    
+# common matisse3g
+$(call inherit-product, device/samsung/matisse-common/matisse3g.mk)

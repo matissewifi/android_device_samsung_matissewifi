@@ -12,21 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common klte
--include device/samsung/klte-common/BoardConfigCommon.mk
+# inherit from common matisse3g
+-include device/samsung/matisse-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltetmo,kltecan,klteatt,klteub,klteacg,klte,kltekor,klteskt,kltektt
+TARGET_OTA_ASSERT_DEVICE := matissewifi,matisse3g
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
-TARGET_UNIFIED_DEVICE := true
-
-# NFC
-BOARD_NFC_CHIPSET := pn547
+TARGET_KERNEL_CONFIG := cyanogenmod_matisse3g_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
@@ -35,5 +27,8 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
 
+# Radio
+BOARD_RIL_CLASS := ../../../device/samsung/matisse/ril
+
 # inherit from the proprietary version
--include vendor/samsung/klte/BoardConfigVendor.mk
+-include vendor/samsung/matisse3g/BoardConfigVendor.mk
