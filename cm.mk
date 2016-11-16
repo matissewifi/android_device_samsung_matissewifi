@@ -27,4 +27,4 @@ PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := T530
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOD8:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 5.0.2 LRX22G T530XXU1BOD8 release-keys"
+#PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOD8:user/release-keys PRIVATE_BUILD_DESC="matissewifixx-user 5.0.2 LRX22G T530XXU1BOD8 release-keys"
