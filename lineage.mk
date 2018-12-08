@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
-# Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
+# Inherit device configuration
+$(call inherit-product, device/samsung/matissewifi/full_matissewifi.mk)
 
-# Recovery
-TARGET_OTA_ASSERT_DEVICE := matissewifi
-
-# inherit from the proprietary version
--include vendor/samsung/matissewifi/BoardConfigVendor.mk
+PRODUCT_RELEASE_NAME := matissewifi
+PRODUCT_NAME := lineage_matissewifi
