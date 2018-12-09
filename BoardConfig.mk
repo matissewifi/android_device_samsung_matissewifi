@@ -16,6 +16,9 @@
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
 
+# Architecture
+TARGET_ARCH := arm
+
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
 
