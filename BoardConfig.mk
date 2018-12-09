@@ -20,8 +20,10 @@
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
 
 # Kernel
-TARGET_KERNEL_CONFIG := msm8226-sec_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
