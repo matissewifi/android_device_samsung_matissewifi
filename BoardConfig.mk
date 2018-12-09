@@ -20,7 +20,7 @@
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
+TARGET_KERNEL_CONFIG := matissewifi_defconfig
 
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
