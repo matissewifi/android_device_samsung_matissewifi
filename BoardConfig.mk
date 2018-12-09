@@ -13,13 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Recovery
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
 
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_matissewifi_defconfig
-
-# Recovery
-TARGET_OTA_ASSERT_DEVICE := matissewifi
 
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
