@@ -21,6 +21,9 @@ LOCAL_PATH := device/samsung/matissewifi
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+
 # SM-T530NU
 # IR Blaster Permissions
 PRODUCT_COPY_FILES += \
@@ -33,9 +36,6 @@ PRODUCT_PACKAGES += \
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
-
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
 # DJABHipHop Builds(Personal Build)
 #DEVICE_SUPPORT_DJ :=true

@@ -16,10 +16,10 @@
 # inherit from common matisse-common
 -include device/samsung/matisse-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/matissewifi
-
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewi
+
+DEVICE_PATH := device/samsung/matissewifi
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
