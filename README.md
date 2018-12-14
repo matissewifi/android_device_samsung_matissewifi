@@ -12,4 +12,6 @@ Tempery rom support thread over on **XDA**
 
 Work In Progress. **Need Help!!!!**
 
+Branch need to build **LineageOS-14.1/LightOS-1.0**
+
 Copyright **2018** - **BAProductions**(The Tab 4 Light 10.1 Project)
