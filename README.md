@@ -1,5 +1,6 @@
 # Tab 4 Light 10.1 Project/Rom
-Device configuration for Samsung Galaxy Tab 4 10.1 matisselte (SM-T535).
+
+**Device repo for Samsung Galaxy Tab 4 10.1 matisselte (SM-T530 & SM-T530NU)**
 
 |Code Name|Model Number|Colors|
 |--|--|--|
@@ -7,8 +8,7 @@ Device configuration for Samsung Galaxy Tab 4 10.1 matisselte (SM-T535).
 
 Tempery rom support thread over on **XDA**
 
-[Click Here](https://forum.xda-developers.com/tab-4/general/rom-lineage-7-1-2-sm-t530-t535-updated-t3839260/) get help with your device & the rom
-or to help maintain the rom & the device 
+[Click Here](https://forum.xda-developers.com/tab-4/general/rom-lineage-7-1-2-sm-t530-t535-updated-t3839260/) get help with your devices & the rom or to help maintain the rom & the devices 
 
 Work In Progress. **Need Help!!!!**
 
