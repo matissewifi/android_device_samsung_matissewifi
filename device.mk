@@ -32,6 +32,7 @@ frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permission
 # SM-T530NU
 # IR Blaster
 PRODUCT_PACKAGES += \
+    consumerir.msm8226 \
 	consumerir.default
 
 # matisse-common
