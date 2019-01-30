@@ -33,7 +33,7 @@ frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permission
 # IR Blaster
 PRODUCT_PACKAGES += \
     consumerir.msm8226 \
-	consumerir.default
+    consumerir.default
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
