@@ -28,5 +28,5 @@
 	<bool name="hide_wifi_hotspot">true</bool>
 	
 	<!-- Whether to enable data usage selection -->
-	<bool name="config_data_usage_selection">true</bool>
+	<bool name="config_data_usage_selection">false</bool>
 </resources>

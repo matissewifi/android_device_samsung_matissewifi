@@ -2,4 +2,4 @@
 ro.sf.lcd_density=160
 
 # radio
-ro.radio.noril=yes
+ro.radio.noril=1
