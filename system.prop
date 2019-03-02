@@ -1,9 +1,2 @@
 # display
 ro.sf.lcd_density=160
-
-# radio
-ro.carrier=wifi-only
-ro.radio.noril=1
-
-# Telephony
-telephony.lteOnCdmaDevice=0

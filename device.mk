@@ -27,13 +27,13 @@ $(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.
 # SM-T530NU
 # IR Blaster Permissions
 PRODUCT_COPY_FILES += \
-#frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
+	frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
 
 # SM-T530NU
 # IR Blaster
 #PRODUCT_PACKAGES += \
+    consumerir.default
 #    consumerir.msm8226 \
-#    consumerir.default
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
