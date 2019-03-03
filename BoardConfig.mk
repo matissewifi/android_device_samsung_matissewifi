@@ -24,8 +24,5 @@ DEVICE_PATH := device/samsung/matissewifi
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # inherit from the proprietary version
 -include vendor/samsung/matissewifi/BoardConfigVendor.mk
