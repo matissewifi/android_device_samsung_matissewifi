@@ -24,6 +24,18 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
+# Disable RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.carrier=wifi-only \
+	ro.radio.noril=1
+
+# Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+	telephony.lteOnCdmaDevice=0
+
+#RIL
+BOARD_PROVIDES_LIBRIL := false
+
 # SM-T530NU
 # IR Blaster Permissions
 PRODUCT_COPY_FILES += \
