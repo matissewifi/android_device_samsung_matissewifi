@@ -43,9 +43,9 @@ PRODUCT_COPY_FILES += \
 
 # SM-T530NU
 # IR Blaster
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     consumerir.default
-#    consumerir.msm8226 \
+#consumerir.msm8226 \
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
