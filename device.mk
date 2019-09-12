@@ -43,15 +43,12 @@ PRODUCT_COPY_FILES += \
 
 # SM-T530NU
 # IR Blaster
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     consumerir.default
-#    consumerir.msm8226 \
+#consumerir.msm8226 \
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
-# DJABHipHop Builds(Personal Build)
-#DEVICE_SUPPORT_DJ :=true
-
 # TODO: opengapps
-#$(call inherit-product, vendor/light/config/opengapps.mk)
+$(call inherit-product, vendor/Gapps-Preloader/opengapps.mk)
