@@ -48,6 +48,12 @@ void gsm_properties()
     property_set("telephony.lteOnGsmDevice", "0");
 }
 
+void wifi_only_properties()
+{
+	property_set("ro.carrier", "wifi-only");
+	property_set("ro.radio.noril", "1");
+}
+
 void init_target_properties()
 {
     std::string platform = GetProperty("ro.board.platform", "");
@@ -56,28 +62,35 @@ void init_target_properties()
 
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("I9301I") == 0) {
-        /* s3ve3gds */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gds/s3ve3g:4.4.2/KOT49H/I9301IXXUANL1:user/release-keys");
-        property_override("ro.build.description", "s3ve3gds-user 4.4.2 KOT49H I9301IXXUANL1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9301I");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3g");
+    if (bootloader.find("T530NU") == 0) {
+        /* matissewifiue */
+        property_override("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matissewifiue/matissewifi:5.0.2/LRX22G/T530NUU1BOJ4:user/release-keys");
+        property_override("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
+        property_override("ro.product.model", "ro.vendor.product.model", "GT-I9301I");
+        property_override("ro.product.device", "ro.vendor.product.device", "s3ve3g");
+        wifi_only_properties();
+    } else if (bootloader.find("T530XX") == 0) {
+        /* matissewifixx */
+        property_override("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
+        property_override("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
+        property_override("ro.product.model", "ro.vendor.product.model", "GT-I9301Q");
+        property_override("ro.product.device", "ro.vendor.product.device", "s3ve3gjv");
+        wifi_only_properties();
+    } else if (bootloader.find("T531XX") == 0) {
+        /* matisse3gxx */
+        property_override("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys");
+        property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
+        property_override("ro.product.model", "ro.vendor.product.model", "GT-I9300I");
+        property_override("ro.product.device", "ro.vendor.product.device", "s3ve3gds");
         gsm_properties();
-    } else if (bootloader.find("I9301Q") == 0) {
-        /* s3ve3gjv */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_override("ro.build.description", "samsung/s3ve3gjv/s3ve3g:4.4.2/KOT49H/I9301QXXUANH1:user/release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9301Q");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3gjv");
+   }  else if (bootloader.find("T535XX") == 0) {
+        /* matisseltexx */
+        property_override("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOL1:user/release-keys");
+        property_override("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOL1 release-keys");
+        property_override("ro.product.model", "ro.vendor.product.model", "GT-I9300I");
+        property_override("ro.product.device", "ro.vendor.product.device", "s3ve3gds");
         gsm_properties();
-    } else if (bootloader.find("I9300I") == 0) {
-        /* s3ve3gdsds */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/s3ve3gdsxx/s3ve3gds:4.4.4/KTU84P/I9300IXWUBNJ1:user/release-keys");
-        property_override("ro.build.description", "s3ve3gdsxx-user 4.4.4 KTU84P I9300IXWUBNJ1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9300I");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "s3ve3gds");
-        gsm_properties();
-    } else {
+    }  else {
         gsm_properties();
     }
 

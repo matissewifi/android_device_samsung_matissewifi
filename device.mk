@@ -42,4 +42,4 @@ PRODUCT_COPY_FILES += \
 # $(call inherit-product, device/samsung/matisse-common/nfc/pn547/product.mk)
 
 # common matisse
-$(call inherit-product, device/samsung/matisse-common/s3ve3g.mk)
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)
