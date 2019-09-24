@@ -21,7 +21,7 @@ include device/samsung/matisse-common/BoardConfigCommon.mk
 
 # Shims
 #TARGET_LD_SHIM_LIBS += \
-#        /system/vendor/lib/libmmcamera_imx175.so|libshim_imx175.so
+#        /system/vendor/lib/libmmcamera_sr130pc20.so|libshim_sr130pc20.so
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matissewifi_defconfig
